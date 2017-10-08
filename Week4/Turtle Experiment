@@ -1,0 +1,216 @@
+from turtle import *
+
+colors = ['purple','green']
+fillcolor(colors[0])
+pensize(3)
+pencolor('black')
+forward (40)
+
+begin_fill()
+left(90)
+forward(40)
+left(90)
+forward(20)
+right(135)
+forward(60)		
+right(90)
+forward(60)
+right(135)	
+forward(20)
+left(90)
+forward(40)
+left(90)
+end_fill()
+
+forward(100) 
+left(90)
+forward (100)
+
+fillcolor(colors[1])
+
+begin_fill()
+for i in range(60):
+	forward(i)
+	left(60)
+end_fill()
+
+left(120)
+forward(60)
+left(60)
+forward(40)
+home()
+
+
+	#second drawing
+fillcolor(colors[0])
+
+	#degree turn
+left(72)
+
+	#start again
+forward (40)
+
+begin_fill()
+left(90)
+forward(40)
+left(90)
+forward(20)
+right(135)
+forward(60)		
+right(90)
+forward(60)
+right(135)	
+forward(20)
+left(90)
+forward(40)
+left(90)
+end_fill()
+
+forward(100) 
+left(90)
+forward (100)
+
+fillcolor(colors[1])
+
+begin_fill()
+for i in range(60):
+	forward(i)
+	left(60)
+end_fill()
+
+left(120)
+forward(60)
+left(60)
+forward(40)
+home()	
+
+	#second drawing
+fillcolor(colors[0])
+
+	#degree turn
+left(144)
+
+	#start again
+forward (40)
+
+begin_fill()
+left(90)
+forward(40)
+left(90)
+forward(20)
+right(135)
+forward(60)		
+right(90)
+forward(60)
+right(135)	
+forward(20)
+left(90)
+forward(40)
+left(90)
+end_fill()
+
+forward(100) 
+left(90)
+forward (100)
+
+fillcolor(colors[1])
+
+begin_fill()
+for i in range(60):
+	forward(i)
+	left(60)
+end_fill()
+
+left(120)
+forward(60)
+left(60)
+forward(40)
+home()
+
+	#second drawing
+fillcolor(colors[0])
+
+	#degree turn
+left(216)
+
+	#start again
+forward (40)
+
+begin_fill()
+left(90)
+forward(40)
+left(90)
+forward(20)
+right(135)
+forward(60)		
+right(90)
+forward(60)
+right(135)	
+forward(20)
+left(90)
+forward(40)
+left(90)
+end_fill()
+
+forward(100) 
+left(90)
+forward (100)
+
+fillcolor(colors[1])
+
+begin_fill()
+for i in range(60):
+	forward(i)
+	left(60)
+end_fill()
+
+left(120)
+forward(60)
+left(60)
+forward(40)
+home()
+
+	#second drawing
+fillcolor(colors[0])
+
+	#degree turn
+left(288)
+
+	#start again
+forward (40)
+
+begin_fill()
+left(90)
+forward(40)
+left(90)
+forward(20)
+right(135)
+forward(60)		
+right(90)
+forward(60)
+right(135)	
+forward(20)
+left(90)
+forward(40)
+left(90)
+end_fill()
+
+forward(100) 
+left(90)
+forward (100)
+
+fillcolor(colors[1])
+
+begin_fill()
+for i in range(60):
+	forward(i)
+	left(60)
+end_fill()
+
+left(120)
+forward(60)
+left(60)
+forward(40)
+home()		
+
+done()
