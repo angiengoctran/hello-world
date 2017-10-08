@@ -1,0 +1,8 @@
+# description of an object I did for Physical Computing class
+{
+	"material": "wood",
+	"size": "6x6",
+	"function": "toy",
+	"options": 2,
+	"battery needed": true
+}
