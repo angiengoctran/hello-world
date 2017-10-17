@@ -63,14 +63,14 @@ function keyPressed() {
 
 function gameObject() {
 
-  this.x = width / 2;
-  this.y = width / 2;
+  this.x = width - 40;
+  this.y = width - 85;
 
   this.hmom = 0;
   this.vmom = 0;
 
   this.speed = 10;
-  this.size = 75;
+  this.size = 25;
 
   this.update = function() {
     this.move();
@@ -106,7 +106,7 @@ function gameObject() {
 
   this.render = function() {
     fill(255,0,0);
-    rect(this.x, this.y, this.size, this.size);
+    rect(this.x, this.y, this.size, 75);
   }
 
 }
