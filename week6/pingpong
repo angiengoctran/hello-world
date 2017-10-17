@@ -1,0 +1,126 @@
+function setup() {
+  createCanvas(200, 200);
+  background(0);
+  noStroke();
+  fill(0, 255, 0);  
+}
+
+var ballX = 100;
+var ballY = 100;
+
+var ballXV = -4;
+var ballYV = 1;
+
+var rectX = 10;
+var rectY = 10;
+var rectX2 = 170;
+var rectY2 = 10;
+
+var i = 5;
+
+var lives = 3;
+
+function draw() {
+  /*rect(300,30,50,50);*/
+  background(0);  
+  setText();
+  setShapes();    
+  bounceCheck();
+  increment();
+  scoreCheck();  
+}
+
+function increment() {  
+  ballX += ballXV;  
+  ballY += ballYV;
+  
+  if(millis() % 1000 == 0) {
+    ballXV = ballXV * 2;
+  }
+}
+
+function mouseMoved() {
+  rectY2 = mouseY;
+  if (keyCode == UP_ARROW) {
+		rectY -= i;
+	} else if (keyCode == DOWN_ARROW) {
+		rectY += i;
+	}
+}
+
+function ball(x, y) {
+  ellipse(x - 2, y, 30, 30);
+  ellipse(x, y, 15, 15);
+}
+
+function setShapes() {
+  fill(255);
+  rect(rectX, rectY, 20, 75);
+  rect(rectX2, rectY2, 20,75);
+  ball(ballX, ballY);
+}
+
+function sliderBounce() {
+  if(rectY < ballY && rectY + 100 > ballY) {
+    ballXV = ballXV * -1;
+    lives += 1;
+  }
+}  
+
+function sliderBounce2() { 
+  if (rectY2 < ballY && rectY2 + 100 > ballY) {
+    ballXV = ballXV * -1;
+    lives += 1;
+  }
+}
+
+function wallBounce() {
+  ballXV = ballXV * -1;
+}
+
+function bounceCheck() {
+  if(ballY < 0 || ballY > 200) {
+    ballYV = ballYV * -1;
+  }
+  
+  if(ballX < 40 && ballXV < 0) {
+    sliderBounce();
+  }
+   
+  if(ballX > 160 && ballXV > 200) {
+    sliderBounce2();
+  }
+  
+  /*if(ballX > 200 && ballXV > 0) {
+    wallBounce();
+  }*/
+  
+  if(ballX < 0) {
+    ballX = 200;
+    lives -= 1;
+  }
+}
+
+function scoreCheck() {
+  if(lives == 0) {
+    //stop the ball
+        ballXV = 0;
+        ballYV = 0;
+    lives = "YOU LOSE";
+        setText();
+  }
+  
+  if(lives == 10) {
+    // stop the ball
+        ballXV = 0;
+        ballYV = 0;
+    lives = "YOU WIN";
+        setText();
+  }
+}
+
+function setText() {
+  textAlign(CENTER);
+  textSize(22);
+  text(lives, 10, 20);
+}
