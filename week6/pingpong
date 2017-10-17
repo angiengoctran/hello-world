@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(200, 200);
+  createCanvas(500, 500);
   background(0);
   noStroke();
   fill(0, 255, 0);  
@@ -13,7 +13,7 @@ var ballYV = 1;
 
 var rectX = 10;
 var rectY = 10;
-var rectX2 = 170;
+var rectX2 = 470;
 var rectY2 = 10;
 
 var i = 5;
@@ -120,7 +120,7 @@ function scoreCheck() {
 }
 
 function setText() {
-  textAlign(CENTER);
+  textAlign(LEFT);
   textSize(22);
   text(lives, 10, 20);
 }
