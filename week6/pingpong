@@ -119,7 +119,7 @@ function ball(x, y) {
 
 function setShapes() {
   fill(255);
-  rect(rectX, rectY, 20, 75);
+  rect(rectX, rectY, 25, 75);
   //rect(rectX2, rectY2, 20,75);
   ball(ballX, ballY);
 }
@@ -184,7 +184,7 @@ function scoreCheck() {
   }
 }
 
-/*function scoreCheck() {
+/*function scoreCheck2() {
   if(lives2 == 0) {
     //stop the ball
         ballXV = 0;
