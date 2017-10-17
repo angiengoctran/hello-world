@@ -61,42 +61,34 @@ function setShapes() {
 }
 
 function sliderBounce() {
-  if(rectY < ballY && rectY + 100 > ballY) {
+  if(rectY < ballY && rectY + 400 > ballY) {
     ballXV = ballXV * -1;
     lives += 1;
   }
 }  
 
-function sliderBounce2() { 
-  if (rectY2 < ballY && rectY2 + 100 > ballY) {
-    ballXV = ballXV * -1;
-    lives += 1;
-  }
-}
-
 function wallBounce() {
   ballXV = ballXV * -1;
 }
 
+
 function bounceCheck() {
-  if(ballY < 0 || ballY > 200) {
+  if(ballY < 0 || ballY > 500) {
     ballYV = ballYV * -1;
   }
   
-  if(ballX < 40 && ballXV < 0) {
+
+  if(ballX < 10 && ballXV < 0) {
     sliderBounce();
   }
-   
-  if(ballX > 160 && ballXV > 200) {
-    sliderBounce2();
+  
+
+  if(ballX > 500 && ballXV > 0) {
+    wallBounce();
   }
   
-  /*if(ballX > 200 && ballXV > 0) {
-    wallBounce();
-  }*/
-  
   if(ballX < 0) {
-    ballX = 200;
+    ballX = 500;
     lives -= 1;
   }
 }
