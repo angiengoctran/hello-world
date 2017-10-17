@@ -143,6 +143,10 @@ function bounceCheck() {
   if(ballX < 40 && ballXV < 0) {
     sliderBounce();
   }
+	
+	if(ballX > 460 && ballXV < 500) {
+    sliderBounce();
+  }
   
   if(ballX > 500 && ballXV > 0) {
     wallBounce();
