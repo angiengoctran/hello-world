@@ -18,7 +18,7 @@ var rectY = 10;
 var lives = 3;
 
 function draw() {
-  /*rect(300,30,50,50);*/
+  rect(500,500,50,50);
   background(0);  
   setText();
   setShapes();    
@@ -136,7 +136,7 @@ function wallBounce() {
 
 
 function bounceCheck() {
-  if(ballY < 0 || ballY > 200) {
+  if(ballY < 0 || ballY > 500) {
     ballYV = ballYV * -1;
   }
   
@@ -144,12 +144,12 @@ function bounceCheck() {
     sliderBounce();
   }
   
-  if(ballX > 200 && ballXV > 0) {
+  if(ballX > 500 && ballXV > 0) {
     wallBounce();
   }
   
   if(ballX < 0) {
-    ballX = 200;
+    ballX = 500;
     lives -= 1;
   }
 }
