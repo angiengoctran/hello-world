@@ -12,7 +12,6 @@ function preload(){
     lefteye = loadImage("images/lefteye.png");
     righteye = loadImage("images/righteye.png");
     lips = loadImage("images/lips.png");
-   // imageMode(CENTER);
     } 
 
 function setup() {
@@ -31,22 +30,7 @@ function setup() {
 function draw() {
     image(capture, 0, 0, w, h);
     var positions = tracker.getCurrentPosition();
-/*
-    noFill();
-    stroke(255);
-    beginShape();
-    for (var i = 0; i < positions.length; i++) {
-        vertex(positions[i][0], positions[i][1]);
-    }
-    endShape();
 
-    noStroke();
-    for (var i = 0; i < positions.length; i++) {
-        fill(map(i, 0, positions.length, 0, 360), 50, 100);
-        ellipse(positions[i][0], positions[i][1], 4, 4);
-        text(i, positions[i][0], positions[i][1]);
-    }
-*/
 
     if (positions.length > 0) {
         var mouthLeft = createVector(positions[44][0], positions[44][1]);
@@ -62,19 +46,11 @@ function draw() {
         noStroke();
         fill(0, 255, 255);
 
-        //Draw on Nose
-//        ellipse(positions[62][0], positions[62][1], 50, 50);
-
-        //Draw on Eyes
 
         imageMode(CENTER);
         image(lefteye, positions[27][0], positions[27][1], 100, 100);
         image(righteye, positions[32][0], positions[32][1], 120, 120);
         image(lips, positions[60][0], positions[60][1], 180, 100);
-        //var x = (positions[27][0] +  positions[32][0])/2
-        //image(brownhat, x, positions[27][1]-50, 300, 300);
-
-      //  ellipse(positions[27][0], positions[27][1], 30, 30);
-      // ellipse(positions[32][0], positions[32][1], 50, 50);
+   
     }
 }
